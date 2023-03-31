@@ -16,21 +16,23 @@
     <nav class="navbar fixed-top d-flex align-items-center flex-direction-row bg-body-tertiary">
 
         
-        <div class="input-group p-2">
+        <div class="input-group d-flex align-items-center justify-content-around ">
 
             <!-- Logo Boolean -->
-            <div class="c-img">
+            <div class="c-img p-0">
                 <img class="img-fluid d-block" src="img-dashboard/img/mobile-logo.png" alt="">
             </div>
 
 
             <!-- Barra di ricerca -->
-            <input type="text " class="form-control rounded-3" placeholder="Prova a cercare: Lezioni di Lavarel" aria-label="Username"
+            <div class="research px-1" style="width: 75%">
+                <input type="text " class="form-control rounded-3 px-3 " placeholder="Prova a cercare: Lezioni di Lavarel" aria-label="Username"
                 aria-describedby="basic-addon1">
+            </div>
 
             
             <!-- Parte finale tasti -->
-            <div class="text-center p-3 d-flex flex-direction-row align-items-center">
+            <div class="text-center d-flex flex-direction-row align-items-center">
 
                 <!-- <button class="navbar-toggler border border-0 px-1 d-none d-sm-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-list-ul ml-2"></i></span>
@@ -78,9 +80,54 @@
     </nav>    
   </header>
 
-  <body>
-    
-  </body>
+  <main class="main-container">
+    <section class="first-container">
+
+        <div class="py-4 d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
+            <div class="first-sub-container">
+                <ul class="icon-list ps-0">
+                    <li>
+                        <div><i class="fa-solid fa-house"></i></div>
+                    </li>
+                    <li>
+                        <div><i class="fa-solid fa-chart-simple"></i></div>
+                    </li>
+                    <li>
+                        <div><i class="bi bi-reception-4"></i></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-gear-fill"></i>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="second-container">
+        <section class="bg-primary" style="height: 300px;">
+            <div>
+                <div class="container-new-student px-3">
+                    <div class="row   d-flex flex-column align-items-center">
+                      <div class="col">
+                        <div class="d-flex flex-row align-items-center">
+                            <span class="student">Nuovo Studente</span><i class="bi bi-plus-square px-3 fs-2"></i>
+                        </div>
+                      </div>
+                      <div class="col">
+                        Column
+                      </div>
+                      <div class="col">
+                        Column
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </section>
+        
+    </section>
+  </main>
     
     
     
