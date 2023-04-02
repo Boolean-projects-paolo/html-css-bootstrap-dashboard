@@ -17,7 +17,7 @@
 
 .first-container{
     height: 100%;
-    width: 80px;
+    width: 90px;
     color: white;
     background-color:rgb(5, 5, 26);
     
@@ -25,7 +25,7 @@
 
 .first-sub-container{
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 2rem;
 
 }
 
@@ -38,27 +38,23 @@
 
 }
 
-.icon{
-    font-size: 10px;
-}
+
 
 
 
 
 .second-container{
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    padding-left: 80px;
+    padding-left: 90px;
 }
 
 .container-new-student{
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     color: white;
 }
 
-.student{
-    font-size: 12px;
-}
+
 
 .button-plus{
     border: 1px solid white;
@@ -68,6 +64,7 @@
 
 .text{
     font-size: 10px;
+    font-weight: 700;
 }
 
 
@@ -77,7 +74,6 @@
 }
 
 .plus{
-    font-size: 11px;
     font-size: 8px;
     padding-inline: 0.5rem;
     padding-bottom: 0.1rem;
@@ -132,7 +128,19 @@
     width: 100px;
 }
 
-@media screen and (min-width: 481px){
+
+.icon:hover{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1201px){
     .c-img1{
         display: none;
     }
@@ -146,11 +154,49 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .c-img1{
+        display: none;
+    }
+
+    .img1{
+        display: none;
+    }
+
+    .plus{
+        font-size: 8px
+    }
+
+    .applicazione{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
 
     .first-container{
         height: 100%;
         width: 40px;  
+    }
+
+    .first-sub-container{
+        width: 100%;
+        padding-top: 3rem;
+    
+    }
+
+    .container-new-student{
+        padding-top: 4rem;
+        color: white;
+    }
+
+    .icona{
+        display: flex;
+        justify-content: center;
+        align-items: start;
     }
 
     .second-container{
@@ -159,11 +205,6 @@
         padding-left: 40px;
     }
 
-    .icon{
-        display: flex;
-        justify-content: center;
-        font-size: 15px;
-    }
 
     .applicazione{
         display: none;
@@ -181,10 +222,15 @@
         display: none;
     }
 
-    .cell{
-        display: none;
-    }
+    
     .classe{
         width: 40%;
     }
 }
+
+@media screen and (max-width: 480px){
+    .cell{
+        display: none;
+    }
+}
+
