@@ -13,35 +13,90 @@
 </head>
 <body>
   <header>
-    <nav class="navbar fixed-top d-flex align-items-center flex-direction-row bg-body-tertiary">
+    <nav class="navbar fixed-top d-flex align-items-center flex-direction-row bg-body-tertiary position-fixed">
 
         
         <div class="input-group d-flex align-items-center justify-content-around ">
 
             <!-- Logo Boolean -->
-            <div class="c-img p-0">
-                <img class="img-fluid d-block" src="img-dashboard/img/mobile-logo.png" alt="">
+            <div class="c-img0 px-1">
+              <img class="img-fluid img0" src="img-dashboard/img/logo.svg" alt="">
+            </div>
+            <div class="c-img1 p-0">
+                <img class="img-fluid" src="img-dashboard/img/mobile-logo.png" alt="">
             </div>
 
 
             <!-- Barra di ricerca -->
-            <div class="research px-1" style="width: 75%">
-                <input type="text " class="form-control rounded-3 px-3 " placeholder="Prova a cercare: Lezioni di Lavarel" aria-label="Username"
+            <div class="research px-1" style=width:60%;>
+                <input type="text " class="form-control rounded-3 px-3" placeholder="Prova a cercare: Lezioni di Lavarel" aria-label="Username"
                 aria-describedby="basic-addon1">
             </div>
 
             
             <!-- Parte finale tasti -->
             <div class="text-center d-flex flex-direction-row align-items-center">
+                <i class="fa-solid fa-list-ul ml-2 d-none d-sm-block px-1"></i>
+                <i class="fa-regular fa-circle-question ml-2 d-none d-sm-block px-1"></i>
+                <i class="fa-solid fa-ellipsis-vertical m-2 d-none d-sm-block px-1"></i>
+                
+                <div class="dropdown">
+                  <button  type="button" class="input bg-light m-0 border-0" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-bell border-0" style="color: #ff8f00;"></i>
+                  </button>
+                
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profilo</a></li>
+                    <li><a class="dropdown-item" href="#" aria-current="true">Fatturazione</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </div>
+                
+            </div>
+        </div>
+    </nav>    
+  </header>
 
-                <!-- <button class="navbar-toggler border border-0 px-1 d-none d-sm-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span><i class="fa-solid fa-list-ul ml-2"></i></span>
-                </button>
+  <main class="main-container">
+    <section class="first-container position-fixed">
 
-                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="py-4 d-flex flex-column align-items-center justify-content-between" style="height: 100%;">
+            <div class="first-sub-container">
+                <ul class="icon-list ps-0">
+                    <li  class="px-2 py-1 icon" style="width: 100%;">
+                        <div class="d-flex align-items-center"><i class="fa-solid fa-house"></i><div class="px-2 text-icon">Home</div></div>
+                    </li>
+                    <li  class="px-2 py-1 icon" style="width: 100%;">
+                        <div class="d-flex align-items-center"><i class="fa-solid fa-chart-simple"></i><div class="px-2 text-icon">Stats</div></div>
+                    </li>
+                    <li  class="px-2 py-1 icon" style="width: 100%;">
+                        <div class="d-flex align-items-center"><i class="bi bi-reception-4"></i><div class="px-2 text-icon">Signals</div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center justify-content-center icon">
+                <i class="bi bi-gear-fill impostazioni"></i><div class="px-2 text-icon">Admin</div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="second-container d-sm-flex flex-column overflow-sm-auto">
+        
+      <div class="bg-primary">
+        <div class="container-new-student px-3 pb-2">
+          <div class=" row row-cols-sm-12 row-cols-md-3">
+            <div class="col-sm-12 order-md-3">
+              <div class="d-flex flex-row align-items-center justify-content-md-end pt-1">
+                <span class="student text">Nuovo Studente</span>
+                <span class="mx-2 px-2 py-1 rounded-2 button-plus">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -55,7 +110,7 @@
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                           </a>
-                          <ul class="dropdown-menu">
+                          <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
@@ -67,66 +122,234 @@
                       </ul>
                       <form class="d-flex mt-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-success" type="submit">Search</button>
                       </form>
                     </div>
-                  </div> -->
-                <i class="fa-solid fa-list-ul ml-2 d-none d-sm-block px-1"></i>
-                <i class="fa-regular fa-circle-question ml-2 d-none d-sm-block px-1"></i>
-                <i class="fa-solid fa-ellipsis-vertical m-2 d-none d-sm-block px-1"></i>
-                <i class="fa-solid fa-bell px-1" style="color: #ff8f00;"></i>
-            </div>
-        </div>
-    </nav>    
-  </header>
-
-  <main class="main-container">
-    <section class="first-container">
-
-        <div class="py-4 d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
-            <div class="first-sub-container">
-                <ul class="icon-list ps-0">
-                    <li>
-                        <div><i class="fa-solid fa-house"></i></div>
-                    </li>
-                    <li>
-                        <div><i class="fa-solid fa-chart-simple"></i></div>
-                    </li>
-                    <li>
-                        <div><i class="bi bi-reception-4"></i></div>
-                    </li>
-                </ul>
-            </div>
-            <div class="d-flex align-items-center justify-content-center">
-                <i class="bi bi-gear-fill"></i>
-            </div>
-        </div>
-        
-    </section>
-
-    <section class="second-container">
-        <section class="bg-primary" style="height: 300px;">
-            <div>
-                <div class="container-new-student px-3">
-                    <div class="row   d-flex flex-column align-items-center">
-                      <div class="col">
-                        <div class="d-flex flex-row align-items-center">
-                            <span class="student">Nuovo Studente</span><i class="bi bi-plus-square px-3 fs-2"></i>
-                        </div>
-                      </div>
-                      <div class="col">
-                        Column
-                      </div>
-                      <div class="col">
-                        Column
-                      </div>
-                    </div>
                   </div>
+                </span>
+              </div>
             </div>
+            <div class="col-sm-12">
+              <div class="fw-semibold pt-1 order-md-1">
+                <ul class="ps-0 m-0">
+                  <li class=""> 
+                    <div class="d-flex align-items-center">
+                      <div class="fw-normal fs-5">Boolean</div>
+                      <div><button type="button" class="plus rounded-4 border-0 mx-1">Piano Blaze</button></div>
+                      
+                    </div>                         
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <div><button type="button" class="plus rounded-4 border-0">3 app</button></div>
+                    <div><i class="fa-sharp fa-solid fa-angles-right text angle mx-1"></i></div>
+                    <div class="cerchio"><i class="fa-solid fa-plus plus p-1 m-0" style="background-color: #00008b67;"></i></div>
+                    <div class="applicazione"><button type="button" class="plus rounded-4 border-0 mx-1">Boolean mobile app</button></div>
+                    <div class="applicazione"><button type="button" class="plus rounded-4 border-0 mx-1">Boolean web app</button></div>
+                    <div class="applicazione"><button type="button" class="plus rounded-4 border-0 mx-1">Boolean blog app</button></div>
+                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="fw-semibold pt-1 order-md-2">
+                <ul class="ps-0">
+                  <li><span class="text">Studenti online negli ultimi 30 minuti</span></li>
+                  <li><span class="fs-4">125</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </section>
+
+      
+      <div class="d-flex flex-wrap">
+        <div class="col-sm-12 col-md-8">
+          <div class="container-table rounded">
+            <div class="border-bottom py-1"><h5 class="fw-semibold">Prossime classi</h5></div>
+            <table class="table caption-top">
+              <thead>
+                <tr>
+                  <div>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="cell text-center"><span>Data d'inizio</span></th>
+                    <th scope="col" class="cell text-center"><span>ROI</span></th>
+                    <th scope="col" class="text-center">Stato</th>
+                    <th scope="col" class="text-center">Azioni</th>
+                  </div>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 75</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-success px-1 py-0 rounded-1 text-center" style="font-size: 8px;">done</button></td>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0 "><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0 text-center"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe text-center"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 76</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-success px-1 py-0 rounded-1" style="font-size: 8px;">done</button></td>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 77</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-warning px-1 py-0 rounded-1" style="font-size: 8px;">Process</button>
+                    <td class=" text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 78</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-success px-1 py-0 rounded-1" style="font-size: 8px;">done</button></td>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 79</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-danger px-1 py-0 rounded-1" style="font-size: 8px;">falied</button>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                    <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 80</span></div></td>
+                  <td class="cell text-center"><span >15 Feb 2021</span></td>
+                  <td class="cell text-center"><span >20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-success px-1 py-0 rounded-1" style="font-size: 8px;">done</button></td>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 81</span></div></td>
+                  <td class="cell text-center"><span>15 Feb 2021</span></td>
+                  <td class="cell text-center"><span>20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-danger px-1 py-0 rounded-1" style="font-size: 8px;">falied</button>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                    <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="classe"><div class="d-flex flex-direction-row align-items-center"><div class="c-img2 p-0"><img class="img-fluid d-block" src="img-dashboard/img/class-avatar.jpg" alt=""></div><span class="px-2">Classe 75</span></div></td>
+                  <td class="cell text-center"><span>15 Feb 2021</span></td>
+                  <td class="cell text-center"><span>20%</span></td>
+                  <td class="text-center"><button type="button" class="btn btn-success px-1 py-0 rounded-1" style="font-size: 8px;">done</button></td>
+                  <td class="text-center"><button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-pencil" style="font-size: 11px;"></i></button>
+                      <button type="button" class="btn btn-outline-secondary px-2 py-0"><i class="fa-solid fa-trash-can" style="font-size: 11px;"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class=" border mt-3 mx-3 rounded mb-3">
+            <div class="border-bottom px-2 py-1"><h5 class="fw-semibold">F.A.Q.</h5></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <span class="m-text fw-semibold p-0">Come aggiungere un nuovo studente?</span> 
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <span class="m-text fw-semibold p-0">Come poddo accedere alle informazioni del mio account?</span> 
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <span class="m-text fw-semibold p-0">Come aggiungere un nuovo studente?</span> 
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class=" border mx-3 rounded mt-3">
+            <div class="border-bottom px-2 py-1"><h5 class="fw-semibold"> Todo</h5></div>
+            <div class="border mx-3 rounded m-3 m-text2 fw-bold border-bottom">
+              <div class="form-check m-text2 fw-bold py-1 border-bottom">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Kickoff nuove classi
+                </label>
+              </div>
+              <div class="form-check m-text2 fw-bold py-1 border-bottom">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Lezione su Bootstrap 5 in classe #75
+                </label>
+              </div>
+              <div class="form-check m-text2 fw-bold py-1">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Controllare username github studenti
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-3 mt-3 mb-3 rounded border">
+            <div class="border m-3 rounded" style="border: lightgray;">
+              <div>
+                <div class=".c-img3"><img class="img-fluid d-block" src="img-dashboard/img/stats.jpeg" alt="">
+                  <h6 class="px-3 fw-semibold">Utenti attivi</h6></div>
+                  <p  class="px-3 fw-bold text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+              </div>
+              <div class="border-bottom p-2 m-text2 ">
+                <span class="fw-bold">Gennaio: 1200<span>
+              </div>
+              <div class="border-bottom p-2 m-text2">
+                <span class="fw-bold">Febbraio: 800</span>
+              </div>
+              <div class="border-bottom p-2 m-text2">
+                <span class="fw-bold">Marzo: 1500</span>
+              </div>
+              <div class="p-2 m-text2">
+                <a class="link-opacity-10-hover" href="#">Visualizza report approfondito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col">
+          
+        </div>
         
+      </div>
+      
     </section>
+
   </main>
     
     
