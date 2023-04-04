@@ -40,9 +40,6 @@
 
 
 
-
-
-
 .second-container{
     /* height: 100%; */
     width: 100%;
@@ -130,7 +127,8 @@
 
 
 .icon:hover{
-    background-color: white;
+    background-color: gray;
+    cursor: pointer;
 }
 
 
@@ -152,6 +150,7 @@
     .cerchio{
         display: none;
     }
+
 }
 
 
@@ -186,6 +185,10 @@
         width: 100%;
         padding-top: 3rem;
     
+    }
+    .impostazioni{
+        margin-top: 7rem;
+        height: 100%;
     }
 
     .container-new-student{
@@ -226,11 +229,26 @@
     .classe{
         width: 40%;
     }
+
 }
+
+
+@media screen and (min-width:481px) and (max-width: 767px) {
+    .impostazioni{
+        margin-top: 7rem;
+        height: 100%;
+    }
+}
+
 
 @media screen and (max-width: 480px){
     .cell{
         display: none;
+    }
+
+    .impostazioni{
+        margin-top: 7rem;
+        height: 100%;
     }
 }
 
